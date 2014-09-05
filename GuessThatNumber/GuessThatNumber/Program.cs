@@ -8,6 +8,11 @@ namespace GuessThatNumber
 {
     class Program
     {
+        //create a random number between 1 and 100
+       public static Random rng = new Random();
+       public static int ranNum = rng.Next(0, 101);
+        //create a "guess count"
+      public static  int guesses = 0;
         static void Main(string[] args)
         {
             //ask the user to guess a number
@@ -21,11 +26,7 @@ namespace GuessThatNumber
         //create a function, GuessThatNumber that takes an integer parameter number
         static void GuessThatNumber(int number)
         {
-            //create a random number between 1 and 100
-            Random rng = new Random();
-            int ranNum = rng.Next(0, 101);
-            //create a "guess count"
-            int guesses = 0;
+            
             //create a boolean to say whether or not the user has guessed correctly
             bool input = false;
             while (input == false)
